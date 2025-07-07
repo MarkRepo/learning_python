@@ -18,9 +18,9 @@ print("language:\n\tpython\n\tgo\n\tcpp")
 # strip
 hello_world = " hello world "
 hello_world = hello_world.strip()
-print(' python '.rstrip())
-print(' python '.lstrip())
-print(' python '.strip())
+print(' python '.rstrip() + "End")
+print(' python '.lstrip() + "End")
+print(' python '.strip() + "End")
 print(hello_world)
 
 # number

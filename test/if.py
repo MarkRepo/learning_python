@@ -1,4 +1,5 @@
 # if 语句
+print("------------------if statement------------------")
 cars = ['audi', 'bmw', 'subaru', 'toyota']
 for car in cars:
     if car == 'bmw':
@@ -9,6 +10,7 @@ for car in cars:
         print(car.title())
 
 # 条件测试, 相等 不等, and, or, >=, <=
+print("------------------cond check------------------")
 car = 'Audi'
 print(car == 'Audi')
 print(car.lower() == 'audi')
@@ -23,6 +25,7 @@ print('audi in cars: ', 'audi' in cars)
 print('tesla not in cars: ', 'tesla' not in cars)
 
 # if 检查列表是否为空
+print("------------------list empty------------------")
 empty_list = []
 if empty_list:
     print("not empty list")

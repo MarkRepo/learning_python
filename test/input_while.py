@@ -1,20 +1,20 @@
 # input()
-# python 2.7 使用raw_input() 获取输入，input会把输入解读为python代码并执行
-from pickle import FALSE
-from select import poll
+# python 2.7 使用raw_input() 获取输入，2.7也有input，input会把输入解读为python代码并执行
 from timeit import repeat
 
-
+print("-------------input-------------")
 message = input("Tell me something, and I will repeat it back to you: ")
 print(message)
 
 # 提示超过一行时
+print("-------------prompt multi lines-------------")
 prompt = "If you tell us who you are, we can personalize the message you see."
 prompt += "\nWhat is your first name? "
 name = input(prompt)
 print("\nHello, " + name + "!")
 
 # int()
+print("-------------input int-------------")
 age = input("How old are you? ")
 age = int(age)
 
@@ -27,6 +27,7 @@ else:
     print("\nThe number " + str(number) + " is odd.")
 
 # while input
+print("-------------input while-------------")
 prompt = "\nTell me something, and I will repeat it back to you:" 
 prompt += "\nEnter 'quit' to end the program. " 
 message = "" 
@@ -36,6 +37,7 @@ while message != 'quit':
         print(message)
 
 # 使用flag
+print("-------------whle with flag-------------")
 active = True
 while active:
     message = input(prompt)
@@ -45,6 +47,7 @@ while active:
         print(message)
 
 # break
+print("-------------whle with break-------------")
 while True:
     city = input(prompt)
     if city == 'quit':
@@ -53,6 +56,7 @@ while True:
         print("I'd love to go to " + city.title() + "!")
 
 # continue
+print("-------------whle with continue-------------")
 current_number = 0 
 while current_number < 10: 
     current_number += 1 
@@ -62,6 +66,7 @@ while current_number < 10:
 
 # 使用while循环处理列表和字典
 # 在列表之间移动元素
+print("-------------whle with pop append-------------")
 unconfirmed_users = ['alice', 'brian', 'candace']
 confirmed_users = []
 while unconfirmed_users:
@@ -74,6 +79,7 @@ for confirmed_user in confirmed_users:
     print(confirmed_user.title())
 
 # 删除特定值的列表元素
+print("-------------whle with remove-------------")
 pets = ['dog', 'cat', 'dog', 'goldfish', 'cat', 'rabbit', 'cat']
 print(pets)
 while 'cat' in pets:
@@ -81,6 +87,7 @@ while 'cat' in pets:
 print(pets)
 
 # 使用用户输入填充字典
+print("-------------whle with map-------------")
 responses = {}
 polling_active = True
 while polling_active:
@@ -90,7 +97,7 @@ while polling_active:
 
     repeat = input('Would you like to leat another person respond?(yes/no)')
     if repeat == 'no':
-        polling_active = FALSE
+        polling_active = False
 print("\n--- Poll Results ---")
 for name, response in responses.items():
     print(name + " would like to climb " + response + ".")
