@@ -1,21 +1,28 @@
 # 读取整个file
-file_path='G:\\python_project\\test\\pi_digits.txt'
+# r 避免转义
+file_path=r'.\test\pi_digits.txt'
+
+# with 在不再需要访问文件后将其关闭
+print("---- read ----")
 with open(file_path) as file_object:
     contents = file_object.read()
     print(contents)
 
 # 逐行读取
+print("---- for ----")
 with open(file_path) as file_object:
     for line in file_object:
         print(line)
 
 # 创建一个包含文件内各行内容的列表
+print("---- readlines ----")
 with open(file_path) as file_object:
     lines = file_object.readlines()
 
 for line in lines:
     print(line.rstrip())
 
+print("---- print pi ----")
 pi_string = ''
 for line in lines:
     pi_string += line.strip()

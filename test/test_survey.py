@@ -1,6 +1,7 @@
 import unittest
 from survey import AnonymousSurvey
 
+# 测试类
 class TestAnonymousSurvey(unittest.TestCase):
     def setUp(self):
         question = "What language did you first learn to speak?"
